@@ -1,0 +1,131 @@
+*************
+* Git Intro *
+*************
+1. Git is Written in C Programming language > So it made it fast > Being close to machine language
+2. Git is made by linus > the Creater of Linux
+
+
+********
+* NOTE *
+********
+1. Command start and end with ` - don't include this with excuting.
+2. Replace your data, where CAPITAL WORD are.
+3. Display file in Current Directory - `ls`
+4. Open file content - `cat FILE_NAME`
+
+
+*******************
+* Initilizing Git *
+*******************
+1. Create a folder in any location (in your Local Computer)
+2. Right click and select "Git Bash Here" Option (make sure you have installed git)
+3. CLI will open
+4. First thing to do is initilize the the git
+5. This will be done by - `git init` (Success Message - Initialized empty Git repository in C:/Git_SampleProject/.git/)
+6. To check if it is initilize or not - In that Folder, there will be a hidden folder name as `.git`
+
+
+******************************
+* Connecting to a repository *
+******************************
+7. Now the git is initilize, we have to link it to a repository
+8. For that use command - `git remote add origin "LINK"` (link will be on clone or download button in github)
+9. On Success No message will be displayed
+10. Step 8 will connect to that repository
+
+
+***********************************
+* Pulling files from a repository *
+***********************************
+11. Now that we have establish a connect with repository now is the time to fetch files from that repository
+12. Command for that is - `git pull origin master` = here master is branch name
+
+
+****************************************************
+* Checking the unindexed file and uncommited files *
+****************************************************
+#NOTE::
+#Before adding file in Repository first we have to add it in to a index file 
+13. Enter command - `git status` = this command will list all the unindexed file in the local repository
+
+
+*************************
+* Add the file in index *
+*************************
+#Indexing a particular file
+14.1. Enter command - `git add FILE_NAME` = this will add the mentioned file in the index
+#Add all file in index at once
+14.2. Command - `git add -A` = This will add all the new or change file in the index
+
+
+**************************************************
+* Commiting the Changes in the Server Repository *
+**************************************************
+#Note:: Commit should contain a message
+15.1. Enter Command - `git commit -m "YOUR_MESSAGE" = This will commit the file which will be ready to push
+#Commiting Multiple Files at Once
+15.2. Command - `git commit -a -m "YOUR_MESSAGE"` = All the file will commit at once
+
+
+********************************
+* Check all the Commit history *
+********************************
+16. command - `git log` = this will display all the commit that where made in descending orer where recent will be on top
+
+
+**********************************************
+* Creating New Branch from the master branch *
+**********************************************
+17. Command - `git branch BRANCH_NAME` = This command will copy all the files from the master to the new branch
+18. Now the Branch is created, its time to switch to that branch
+
+
+********************
+* Switching branch *
+********************
+19. Command - `git checkout BRANCH_NAME` = To check the branch has been changed or not, branch name will be displayed on the screen
+
+
+**********************
+* Merging two branch *
+**********************
+#Point to remember is you have to be in that branch where you want to merge it. in our case it will be master branch, THEN the BRANCH will not be delete we can continue our work there as well.
+20. Command - `git merge BRANCH_NAME` 
+
+
+***************************
+* Pushing Files in GitHub *
+***************************
+#Before pushing file make sure you are connect in SSH connection, This is to make sure the file are updates properly without the interference of the other users
+#First we need to generate ssh key
+21. Command - `ssh-keygen` = This will generate a key for ssh connection
+22. Copy that key from .pub file and create a new ssh in github
+23. For creating new ssh connection go to 
+	->setting 
+	  ->ssh and gpg key 
+	    ->new ssh key 
+	      ->give name to key and paste the key 
+		->then click add button
+
+
+********************************
+* Now check for the connection *
+********************************
+24. Command - `ssh -T git@github.com` = This will authenicate the user
+25. On successfull connection it will prompt message like - `Hi {UserName}! You've successfully authenticated, but GitHub does not provide shell access.`
+
+
+***************************
+* Pushing Files to github *
+***************************
+26. Command - `git push origin BRANCH_NAME` = This Command will add file to the Branch which name is provided
+
+
+********************************
+* Roll back to previous Commit *
+********************************
+27. Command - `git checkout FIRST_8_DIGIT_OF_LONG_HASH_CODE FILE_NAME` = This command will revert back the file, which is mention in the command
+
+
+
+

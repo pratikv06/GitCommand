@@ -1,0 +1,20 @@
+***************
+* Git Command *
+***************
+
+1. Initilizing Git - `git init`
+2. Connecting to a repository - `git remote add origin LINK`
+3. Pulling files from repository - `git pull origin master` 
+4. Check unindexed and uncommited files - `git status`
+5. Adding to index - `git add FILENAME` OR `git add -A`
+6. Commiting - `git commit -m "MESSAGE"` OR ` git commit a 0m "MESSAGE"`
+7. Commit history - `git log`
+8. Pushing files - `git push origin BRANCHNAME`
+9. Create branch - `git branch BRANCHNAME`
+10. Switching Branch - `git checkout BRANCHNAME`
+11. Merging Branch - `git merge BRANCHNAME`
+
+********
+* NOTE *
+********
+1. ` - this denote starting and end of the command
