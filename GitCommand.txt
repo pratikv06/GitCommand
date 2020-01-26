@@ -7,7 +7,7 @@
 3. Pulling files from repository - `git pull origin master` 
 4. Check unindexed and uncommited files - `git status`
 5. Adding to index - `git add FILENAME` OR `git add -A`
-6. Commiting - `git commit -m "MESSAGE"` OR ` git commit a 0m "MESSAGE"`
+6. Commiting - `git commit -m "MESSAGE"` OR ` git commit -a -m "MESSAGE"`
 7. Commit history - `git log`
 8. Pushing files - `git push origin BRANCHNAME`
 9. Create branch - `git branch BRANCHNAME`
