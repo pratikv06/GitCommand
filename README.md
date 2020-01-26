@@ -2,5 +2,5 @@
 Some Basic command to use git bash
 
 
-1. [Git Command](Git Command.txt)
-2. [Git Notes](Git Notes.txt)
+1. [Git Command](GitCommand.txt)
+2. [Git Notes](GitNotes.txt)
