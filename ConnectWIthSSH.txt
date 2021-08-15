@@ -1,0 +1,41 @@
+==================================
+= Checking for Existing SSH Keys =
+==================================
+1. Open Git Bash
+2. Enter `ls -al ~/.ssh` to get the existing SSH Keys
+3. Pair of key with same name one with .pub extension (Private and Public Key)
+
+========================
+= Creating New SSH Key =
+========================
+1. Open Git Bash
+2. Using ED25519 Algorithm to generate SSH Key
+    `ssh-keygen -t ed25519 -C "your_email@example.com"`
+3. Enter the file name in which you want to store key or press enter to use defult name
+4. Leave secure passprase blank
+
+===============================
+= Adding SSH key to ssh-agent =
+===============================
+1. Starting ssh-agent in background
+    `eval "$(ssh-agent -s)"`
+2. Adding Private key to ssh-agent, replace id_ed25519 with your key name
+    `ssh-add ~/.ssh/id_ed25519`
+
+====================================
+= Adding SSH Key to Github Account =
+====================================
+1. Open Git bash and copy public key (Enter your key_name.pub)
+    `clip < ~/.ssh/id_ed25519.pub`
+2. Open Profile> Setting> SSH and GPG Keys> New SSH Key
+3. Give appropriate title to ssh key and paste in Key field
+4. Click Add SSH Key and confirm password
+
+==========================
+= Testing SSH Connection =
+==========================
+1. Open Git Bash
+2. Enter the following Command 
+    `ssh -T git@github.com`
+3. Type `yes` to verify the RSA key 
+4. On sucess you get your usename and sucessfully authenticated message

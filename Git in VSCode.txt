@@ -1,0 +1,88 @@
+================================
+=     Using Git in VS Code     = 
+================================
+- Open Command Palette: `Ctrl + Shift + P`
+
+================================
+= Setting-up Git on our System =
+================================
+
+1. Check git version
+> `git --version`
+
+2.  Updating Git Config with Name and Email
+> `git config --global user.name "YourName"`
+> `git config --global user.email "YourEmail"`
+
+3. Check git config value
+> `git config --global --list`
+
+=======================
+= Creating Local-Repo =
+=======================
+1. Open the folder where you want to create the local repository
+   [Make sure that folder name doesn't contain space; and use lowercase]
+2. Open the Source Control Tab (SCT) from left pane
+3. Click on the + icon to initialize git repo and enter path
+   [Make sure the path is same as VS Code folder path with current folder in it]
+4. Add your files in the folder
+5. Changes to observe in VS Code
+   - SCT has blue circle with number in it
+   - File is colored and have label at right- U(Untracked:Green) and M(Modified:Orange) 
+6. Commit all and commit select files
+   1. Commit all (auto stage all the files)
+      - UI: add commit message and from three dot select commit all
+      - Command: `Git: Commit All`
+   2. Commit selected files
+      - UI: add the file to stage changes, provide the commit message, select commit staged from option
+      - Command: `Git: Commit`
+7. Changes to observe in VS Code
+   - SCT blue circle gone
+   - File color and label also gone
+
+===========================================
+= Creating Connection with Git-repository = 
+===========================================
+8. Before push the file to git remote repo, create a repository with same name as local-repo, and copy the repository URL
+9. Press Ctrl + Shift + p to open Command Palette (CP), 
+   select/search `Git: Add Remote...`, 
+   next provide name to remote, 
+   paste the URL that we copied Before
+10. Open CP and fetch from git-repo: `Git: Fetch`
+
+==============================
+= Publishing the code to Git =
+==============================
+11. Using Sync to publish the code
+    Find at left bottom (refresh symbol),
+    In SCT option
+    or in CP `Git: Sync`
+
+=====================================
+= Pulling Files from git-repository =
+=====================================
+12. We can use Pull or Pull From, I'm using Sync here: `Git: Sync`
+
+================================
+= Creating or changing branch =
+================================
+13. Click on left bottom button before sync or Search in CP `Git: Checkout to...`
+14. Select the branch or create new one
+15. Branch is not yet visible in github.com
+16. To make it visible publish the code from that branch
+NOTE: If you don't want to publish to branch in git-repository;
+      Merge it with master then publish the master branch
+
+================================
+= Merging the branch to master =
+================================
+17. Change to branch to master: `Git: Merge Branch...`
+18. Select the branch you want to merge in master branch
+19. Then publish the master branch to see changes in git-repository
+
+=============================
+= Cloning a branch from git =
+=============================
+20. Copy the link from Code from github.com
+21. Open a new VS Code Window
+22. Search for `Git: Clone`, paste the URL, select the folder to save the code in local-repository
