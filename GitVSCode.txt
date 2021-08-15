@@ -2,6 +2,13 @@
 =     Using Git in VS Code     = 
 ================================
 - Open Command Palette: `Ctrl + Shift + P`
+- Adding remote connection: `Git: Add Remote...`
+- Fetching Git-repository first time: `Git: Fetch`
+- Pull/Push: `Git: Sync`
+- Changing/Creating Branch: `Git: Checkout to...`
+- Merge Branch: `Git: Merge Branch...`
+- Clone Branch: `Git: Clone`
+
 
 ================================
 = Setting-up Git on our System =
